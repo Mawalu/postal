@@ -39,13 +39,13 @@
 #  index_servers_on_uuid             (uuid)
 #
 
-FactoryBot.define do
+FactoryGirl.define do
 
   factory :server do
     association :organization
-    name { "Mail Server" }
-    mode { "Live" }
-    provision_database { false }
+    name "Mail Server"
+    mode "Live"
+    provision_database false
     sequence(:permalink) { |n| "server#{n}" }
   end
 
